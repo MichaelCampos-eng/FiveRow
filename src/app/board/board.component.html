@@ -1,61 +1,47 @@
 <html>
-
+    <body>
+    <!-- Title -->
     <h1>Five Row</h1>
-    
 
-    <div class="container">
-        <div (click)="newGame()" class="btn btn-1">
-            <svg>
-            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-            </svg>
-            Start New Game
-        </div>
-
-        <main>
-            <app-square class="btn btn-2"
-                *ngFor="let val of squares; let i = index" 
-                [value]="val"
-                (click)="makeMove(i)"> 
-            </app-square>
-        </main>
-
-
-        <!-- Whose turn display text or winner -->
-        <div class="status">
-            <h2 *ngIf="winner">
-                Player '{{ winner }}' won the game!
-            </h2>
-            <h2 *ngIf="!winner && xIsNext">
-                Player 'X' Turn!
-            </h2>
-            <h2 *ngIf="!winner && !xIsNext">
-                Player 'O' Turn!
-            </h2>
-        </div>
-    </div>
-
-    
-
-    
     <!-- Waves animation -->
-    <div>
+    <div class="wrapper-waves">
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
         </defs>
         <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
         </g>
         </svg>
+        <!-- Signature -->
+        <div class="content flex">
+            <p>FiveRow | v.1.1.0 </p>
+        </div>
     </div>
 
-    <!-- Signature -->
-    <div class="content flex">
-        <p>FiveRow | M.C </p>
-    </div>
-
+    <main>
+        <!-- Refresh Button -->
+        <svg class="btn" (click)="newGame()">
+            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+            <text class="scoreboard" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"> X | {{playerX}} : {{playerO}} | O </text>
+            <text class="default" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Start New Game</text>      
+        </svg>
+    
+        <!-- Grid -->
+        <div class="container">
+            <div class="row" 
+                *ngFor="let row of squares; let i = index">
+                <app-square
+                    *ngFor="let square of row; let j = index" 
+                    [value]="square"
+                    (click)="makeMove(i, j)"> 
+                </app-square>
+            </div>
+        </div>
+    </main>
+    </body>
 </html>

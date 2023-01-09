@@ -5,7 +5,6 @@ $red: #bb3530;
 $white: #fff;
 
 //base styles
-
 * { 
   transition-property: all;
   transition-duration: .6s;
@@ -14,8 +13,8 @@ $white: #fff;
 
 html,
 body {
-    background: linear-gradient(to right, #ed213a, #93291e);
-    box-sizing: border-box;
+    //background: linear-gradient(to right, #ed213a, #93291e);
+    //box-sizing: border-box;
     height: 100%;
     width: 100%;
     background: $red;
@@ -23,144 +22,115 @@ body {
     font-weight: 400;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-gap: 0px;
-}
-  
-app-square {
-  border: 1px gray solid;
-  height: 100px;
-}
-
-// Button wrap
-.container { 
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em;
-    text-align: center; 
-}
-
 h1 {
   color: $white;
   font-size: 3.25em;
   font-weight: 900;
-  text-align: center; 
+
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+// Content
+main {
+  position: relative;   // Relative to its own position
+  top: 80px; // Lower from top
+  align-items: center; // Align elements to the center
+  display: flex; // Grid like
+  flex-direction: column;
+  @media (max-width: 768px) {
+    top: 60px;
+  }
+}
+
+// Rest of Content
+.container {
   position: relative;
-  top: 10px;
+  top: 80px;
+  max-width: 600px;
+  max-height: 400px;
   
-  @media (min-width: 450px) {
-    font-size: 1.75em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center; 
+  overflow-y: auto; // Creates a "scroll window"
+
+  @media (max-width: 768px) {
+    max-width: 400px;
+    top: 50px;
   }
-  
-  @media (min-width: 760px) {
-    font-size: 2.25em;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
   }
-  
-  @media (min-width: 900px) {
-    font-size: 3.25em;
+
+  app-square {
+    //fill: $white;
+    border: 1px solid $white;
   }
 }
 
-.status {
-  animation: move 2s infinite;
-  opacity: 0;
-  transition: opacity 2s ease-out;
-
-  @keyframes move {
-    25% {
-      transform: translatey(-0.5vmin);
-      opacity: 1;
-    }
-    50% {
-      transform: translatey(-1vmin);
-    }
-    75% {
-      transform: translatey(-1.6vmin);
-    }
-  }
-
-  h2 {
-    left: 520px;
-    color: white;
-    font-size: 1.5em; 
-    text-shadow: .12em .12em 0 #000;
-  
-    @media (min-width: 450px) {
-      font-size: 1.5em;
-    }
-    
-    @media (min-width: 760px) {
-      font-size: 1.25em;
-    }
-    
-    @media (min-width: 900px) {
-      font-size: 1.00em;
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Button
 .btn {
-  color: $white;
   cursor: pointer;
-  font-size:16px;
-  font-weight: 400;
-  line-height: 45px;
-  max-width: 160px; 
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%; 
-  &:hover { text-decoration: none; }
-}
-
-.btn-1 {
+  position: absolute;  // Positioned relative to the container
+  height: 50px;
+  width: 250px;
   background: darken($red, 1.5%);
-  font-weight: 100;
-  margin: 0 0 2em;
 
-  @media(min-width: 600px) {
-    margin: 0 1em 1em;
+  text {
+    font-weight: 100;
+    fill: $white;
+    font-size: 16px;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  } 
+
+  .default {
+    opacity: 0;
   }
 
-  svg {
-    height: 45px;
-    left: 0;
-    position: absolute;
-    top: 0; 
-    width: 100%; 
-  }
-  
   rect {
-    fill: none;
-    stroke: #fff;
+    color: $white;
+    stroke: $white;
     stroke-width: 2;
     stroke-dasharray: 422, 0;
     transition: all 0.35s linear;
   }
+
+  @media (max-width: 768px) {
+    text {
+      font-size: 10px;
+    }
+    height: 30px;
+    width: 135px;
+  }
 }
 
-.btn-1:hover {
+.btn:hover {
   background: rgba($red, 0);
-  font-weight: 900;
-  letter-spacing: 1px;
+  .scoreboard {
+    opacity: 0;
+  }
+
+  .default {
+    opacity: 1;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
   
   rect {
     stroke-width: 5;
@@ -170,24 +140,18 @@ h1 {
   }
 }
 
-.btn-2 {
-  border: 0 solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(255, 255, 255, .5);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-} 
-
-.btn-2:hover {
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 3px;
-  outline-width: 5px;
+// Wave Animation
+.wapper {
+  position: relative;
 }
 
-.flex { /*Flexbox for containers*/
+.content {
+  position:absolute; //game changer
+  width: 100%; //game changer: distribute equally in flex display
+  bottom: 0; //game changer
+  height: 20vh; //game changer
+  text-align:center;
+  background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,19 +160,11 @@ h1 {
 }
 
 .waves {
-  position:relative;
+  position:absolute;
+  bottom: 20vh;
   width: 100%;
-  height:15vh;
+  height: 350px;
   margin-bottom:-6px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
-
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
 }
 
 .parallax > use {
@@ -238,25 +194,23 @@ h1 {
     transform: translate3d(85px,0,0);
   }
 }
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}
 
 p {
   letter-spacing: 1px;
   font-size:14px;
   color: #333333;
 }
-    
-  
-  
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 150px;
+    bottom: 10vh;
+  }
+  .content {
+    height:10vh;
+  }
+  p {
+    font-size:10px;
+  }
+}

@@ -1,14 +1,19 @@
-<button 
-style = "background-color: rgb(82, 0, 0)"
-*ngIf="value == 'O'">
-{{ value }}</button>
+<svg *ngIf="value && value[0] == 'O'">
+    <rect fill="rgb(82,0,0)" x="0" y="0" width="100%" height="100%"/>
 
-<button 
-style = "background-color: rgb(183, 0, 0)"
-*ngIf="value == 'X'">
-{{ value }}</button>
+    <text class="positive" *ngIf="value[1] && value[1] > 0" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ value[0] }}</text>
+    <text class="negative" *ngIf="value[1] && 0 > value[1]" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ value[0] }}</text>
+    <text class="neutral" *ngIf="!value[1]" x="0" y="0" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ value[0] }}</text>
+</svg>
 
-<button 
-style = "background-color: rgb(182, 182, 182)"
-*ngIf="!value">
-{{ value }}</button>
+<svg *ngIf="value && value[0] == 'X'">
+    <rect fill="rgb(183,0,0)" x="0" y="0" width="100%" height="100%"/>
+
+    <text class="positive" *ngIf="value[1] && value[1] > 0" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ value[0] }}</text>
+    <text class="negative" *ngIf="value[1] && 0 > value[1]" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ value[0] }}</text>
+    <text class="neutral" *ngIf="!value[1]" x="0" y="0" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ value[0] }}</text>
+</svg>
+
+<svg *ngIf="!value">
+    <rect class="unregistered" x="0" y="0" fill="rgb(182,182,182)" width="100%" height="100%"/>
+</svg>
