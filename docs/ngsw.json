@@ -1,0 +1,105 @@
+{
+  "configVersion": 1,
+  "timestamp": 1673304609650,
+  "index": "/fiveRow/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/fiveRow/favicon.ico",
+        "/fiveRow/index.html",
+        "/fiveRow/main.c14daed7786d682a.js",
+        "/fiveRow/manifest.webmanifest",
+        "/fiveRow/polyfills.eb3672f6fd5d4ebc.js",
+        "/fiveRow/runtime.39c3038627ebcfe5.js",
+        "/fiveRow/styles.64149f24ab077b0a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/fiveRow/assets/docs/fiverow/3rdpartylicenses.txt",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-128x128.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-144x144.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-152x152.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-192x192.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-384x384.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-512x512.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-72x72.png",
+        "/fiveRow/assets/docs/fiverow/assets/icons/icon-96x96.png",
+        "/fiveRow/assets/docs/fiverow/favicon.ico",
+        "/fiveRow/assets/docs/fiverow/index.html",
+        "/fiveRow/assets/docs/fiverow/main.c2b237cadd33a3cc.js",
+        "/fiveRow/assets/docs/fiverow/manifest.webmanifest",
+        "/fiveRow/assets/docs/fiverow/ngsw-worker.js",
+        "/fiveRow/assets/docs/fiverow/ngsw.json",
+        "/fiveRow/assets/docs/fiverow/polyfills.eb3672f6fd5d4ebc.js",
+        "/fiveRow/assets/docs/fiverow/runtime.39c3038627ebcfe5.js",
+        "/fiveRow/assets/docs/fiverow/safety-worker.js",
+        "/fiveRow/assets/docs/fiverow/styles.64149f24ab077b0a.css",
+        "/fiveRow/assets/docs/fiverow/worker-basic.min.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/fiveRow/assets/docs/fiverow/3rdpartylicenses.txt": "7193ec730700530cc7b2327e16182b3f4eb1cc03",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-128x128.png": "1ffc8e17da8f2e7748db9c6160acfa3a7100fd37",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-144x144.png": "b8f701c72f52a95cc658cb75f6e42ff51faac5bb",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-152x152.png": "b4dbe3ad5f4c5032d388e257c5daab5404556d9e",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-192x192.png": "ec7106d00d19b776da91500a3190431218fe1e34",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-384x384.png": "5b2e6b28a3546fcbb54ba014d3a93809246deef4",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-512x512.png": "726f6621532c0f4f2f4fe267333a5b53657d0713",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-72x72.png": "664020c85457c2e6edfd3f2400d23b973bd59ded",
+    "/fiveRow/assets/docs/fiverow/assets/icons/icon-96x96.png": "94a900348ba33901262a909b5edcfbf46265f7c5",
+    "/fiveRow/assets/docs/fiverow/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/fiveRow/assets/docs/fiverow/index.html": "5ec3298e3e5da8a5234b9eded25da1cd3dfbd70f",
+    "/fiveRow/assets/docs/fiverow/main.c2b237cadd33a3cc.js": "ed9f7761eb10583605fc335da1836b3a9169a75c",
+    "/fiveRow/assets/docs/fiverow/manifest.webmanifest": "af38029b6f31f9b63ef5cd19c3a43de68fc6e0b9",
+    "/fiveRow/assets/docs/fiverow/ngsw-worker.js": "f052bfb68424be9c74eda87da0119a23c78e9c2f",
+    "/fiveRow/assets/docs/fiverow/ngsw.json": "c55b8e20dd4a4987d5bcc61ccbfa2d1b295c3c04",
+    "/fiveRow/assets/docs/fiverow/polyfills.eb3672f6fd5d4ebc.js": "fdff165ebdca68cbe51b79600353ef2287d1d8bf",
+    "/fiveRow/assets/docs/fiverow/runtime.39c3038627ebcfe5.js": "33e21257f36ecd5d9e79ed30e9cfb4544e586be6",
+    "/fiveRow/assets/docs/fiverow/safety-worker.js": "f052bfb68424be9c74eda87da0119a23c78e9c2f",
+    "/fiveRow/assets/docs/fiverow/styles.64149f24ab077b0a.css": "1d52f3482132501bbc3515f0a5bb39ea75aeb96e",
+    "/fiveRow/assets/docs/fiverow/worker-basic.min.js": "f052bfb68424be9c74eda87da0119a23c78e9c2f",
+    "/fiveRow/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/fiveRow/index.html": "084003b85338d6fe9edd54e97685360c98e4c850",
+    "/fiveRow/main.c14daed7786d682a.js": "daf2163f144c0006c54cd30ab6c48dfad7c96944",
+    "/fiveRow/manifest.webmanifest": "af38029b6f31f9b63ef5cd19c3a43de68fc6e0b9",
+    "/fiveRow/polyfills.eb3672f6fd5d4ebc.js": "fdff165ebdca68cbe51b79600353ef2287d1d8bf",
+    "/fiveRow/runtime.39c3038627ebcfe5.js": "33e21257f36ecd5d9e79ed30e9cfb4544e586be6",
+    "/fiveRow/styles.64149f24ab077b0a.css": "1d52f3482132501bbc3515f0a5bb39ea75aeb96e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
